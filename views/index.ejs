@@ -1,0 +1,45 @@
+<%- include ('partials/header.ejs') %> 
+<%- include ('partials/navbar.ejs') %>
+
+<div class="container mt-5">
+ 
+<div class="mt-5 pergunta-pagina">
+    <div class="pergunte-titulo">
+    <h2>Pergunte</h2>
+</div>
+
+
+<div class="icone">
+    <a href="/perguntar" target="_blank" rel="noopener noreferrer">
+        <i class="las la-sign-in-alt"></i>
+    </a>
+    
+</div>
+
+<% perguntas.forEach(pergunta=>{%>
+
+</div>
+<hr>
+    <div class=" question">
+        <div class="img-question">
+            <img src="/img/question.png" alt="Question Image" class="img-fluid">
+        </div>
+
+        <div class="question-card">
+            <h2><%=pergunta.title%></h2>
+            <p><%=pergunta.message%></p>
+
+            <a href="/pergunta/<%=pergunta.id%>" class="link-question">
+                <span>
+                    RESPONDA
+                </span>
+                
+            </a>
+        </div>
+    </div>
+
+
+
+</div>
+<% })%>
+<%- include ('partials/footer.ejs') %>
